@@ -27,7 +27,7 @@ console.log("total sum is = ", sum);
 //Сложите только целую часть стоимости всех товаров (представьте что мы решили упразднить 
 //копейки в наших товарах) и выведите это значение.
 //Округление использовать в МЕНЬШУЮ сторону.
-let sumWithoutCoins = Math.floor(sum);
+let sumWithoutCoins = Math.floor(tomatoPrice) + Math.floor(applePrice) + Math.floor(potatoPrice);
 console.log("Total price without coins is = ", sumWithoutCoins);
 
 //Выведите сумму товаров округленную до сотен. (Например если получилось 260, то выведите 300)
