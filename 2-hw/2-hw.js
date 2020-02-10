@@ -9,22 +9,32 @@
 
 let start = NaN;
 
-do {
-    start = parseInt(prompt("Введите первое число"));
-} while (isNaN(start));
+while (true) {
 
-console.log(start);
+    let inputValue = (prompt("Введите первое число"));
+    start = parseInt(inputValue);
+    if (inputValue.length == start.toString().length) {
+        break;
+    }
+}
 
-// 2.Проверьте является ли переданное значение N ЦЕЛЫМ числом. 
-//(Подсказка: если при конвертации в целое число мы получили NaN – это не подходящее нам число)
+console.log("старт", start);
+
+// // 2.Проверьте является ли переданное значение N ЦЕЛЫМ числом. 
+// //(Подсказка: если при конвертации в целое число мы получили NaN – это не подходящее нам число)
 
 let end = NaN;
 
-do {
-    end = parseInt(prompt("Введите второе число"));
-} while (isNaN(end));
+while (true) {
 
-console.log(end);
+    let inputValue = (prompt("Введите второе число"));
+    end = parseInt(inputValue);
+    if (inputValue.length == end.toString().length && end > start) {
+        break;
+    }
+}
+
+console.log("end = ", end);
 
 
 // 3 Получите у пользователя булевый параметр(true/false), который подскажет нам нужно 
