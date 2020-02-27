@@ -62,13 +62,17 @@ function getMarks(students, marks) {
 const studentMarks = getMarks(students, marks);
 console.log("student Marks: ", studentMarks);
 
+
+
 // 4 Поставьте каждой паре случайную оценку(от 1 до 5) за проект(тут функция будет нечистой, 
 //но не должна мутировать массив): [["Саша и Лена", "Теория автоматов", 5], [...], [...]]
 
+
 function getpairSubMarks(pairsSub, marks) {
-  let pairSubMarks = [...pairsSub];
-    for (let i = 0; i < pairsSub.length; i++) {
+   let pairSubMarks = JSON.parse(JSON.stringify(pairsSub)); 
+   for (let i = 0; i < pairSubMarks.length; i++) {
     const mark = getRandomMark(1,5);
+    console.log(pairSubMarks[i] === pairsSub[i]);
     pairSubMarks[i].push(mark);
   }
    return pairSubMarks;
@@ -84,3 +88,4 @@ function getRandomMark(min, max) {
 
 const pairSubMarks = getpairSubMarks(pairsSub, marks);
 console.log("pair random Marks = ", pairSubMarks);
+
